@@ -4,8 +4,9 @@ import SloRule, {
     MetricOption,
     ComparisonOperator,
     StatisticsOption,
-    PresetOption
+    PresetOption,
 } from "./slo-rule.model";
+import { GropiusComponent, GropiusProject, GropiusIssue } from "./gropius.model";
 
 export {
     SloRule,
@@ -14,5 +15,8 @@ export {
     ComparisonOperator,
     StatisticsOption,
     PresetOption,
+    GropiusComponent,
+    GropiusProject,
+    GropiusIssue,
     Target
 }
