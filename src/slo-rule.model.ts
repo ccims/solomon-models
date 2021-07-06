@@ -58,10 +58,10 @@ export enum MetricOption {
 }
 
 export enum ComparisonOperator {
-    GREATER = 'GreaterThanThreshold ',
-    LESS = 'LessThanThreshold ',
-    GREATER_OR_EQUAL = 'GreaterThanOrEqualToThreshold ',
-    LESS_OR_EQUAL = 'LessThanOrEqualToThreshold ',
+    GREATER = 'GreaterThanThreshold',
+    LESS = 'LessThanThreshold',
+    GREATER_OR_EQUAL = 'GreaterThanOrEqualToThreshold',
+    LESS_OR_EQUAL = 'LessThanOrEqualToThreshold',
     EQUAL = "Equal",
     NOT_EQUAL = "NotEqual",
 }
