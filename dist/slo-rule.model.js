@@ -32,10 +32,10 @@ var MetricOption;
 })(MetricOption = exports.MetricOption || (exports.MetricOption = {}));
 var ComparisonOperator;
 (function (ComparisonOperator) {
-    ComparisonOperator["GREATER"] = "GreaterThanThreshold ";
-    ComparisonOperator["LESS"] = "LessThanThreshold ";
-    ComparisonOperator["GREATER_OR_EQUAL"] = "GreaterThanOrEqualToThreshold ";
-    ComparisonOperator["LESS_OR_EQUAL"] = "LessThanOrEqualToThreshold ";
+    ComparisonOperator["GREATER"] = "GreaterThanThreshold";
+    ComparisonOperator["LESS"] = "LessThanThreshold";
+    ComparisonOperator["GREATER_OR_EQUAL"] = "GreaterThanOrEqualToThreshold";
+    ComparisonOperator["LESS_OR_EQUAL"] = "LessThanOrEqualToThreshold";
     ComparisonOperator["EQUAL"] = "Equal";
     ComparisonOperator["NOT_EQUAL"] = "NotEqual";
 })(ComparisonOperator = exports.ComparisonOperator || (exports.ComparisonOperator = {}));

@@ -41,10 +41,10 @@ export declare enum MetricOption {
     NLB_TARGET_TLS_NEGOTIATION_ERROR_COUNT = "TargetTLSNegotiationErrorCount"
 }
 export declare enum ComparisonOperator {
-    GREATER = "GreaterThanThreshold ",
-    LESS = "LessThanThreshold ",
-    GREATER_OR_EQUAL = "GreaterThanOrEqualToThreshold ",
-    LESS_OR_EQUAL = "LessThanOrEqualToThreshold ",
+    GREATER = "GreaterThanThreshold",
+    LESS = "LessThanThreshold",
+    GREATER_OR_EQUAL = "GreaterThanOrEqualToThreshold",
+    LESS_OR_EQUAL = "LessThanOrEqualToThreshold",
     EQUAL = "Equal",
     NOT_EQUAL = "NotEqual"
 }

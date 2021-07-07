@@ -26,35 +26,35 @@ export enum DeploymentEnvironment {
 }
 
 export enum PresetOption {
-    AVAILABILITY = "Availability",
-    RESPONSE_TIME = "Response time",
-    CUSTOM = "Custom"
+    AVAILABILITY = 'Availability',
+    RESPONSE_TIME = 'Response time',
+    CUSTOM = 'Custom'
 }
 
 // in CW the allowed metrics depend on the target type and should thus be fetched dynamically, e.g. for Lambda Errors, Invocations, Duration, Throttles, ConcurrentExecutions
 export enum MetricOption {
     // Prometheus
     PROBE_SUCCESS = 'probe_success',
-    RESPONSE_TIME = "probe_duration_seconds",
+    RESPONSE_TIME = 'probe_duration_seconds',
 
     // AWS Lambda (https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics.html):
-    LAMBDA_DURATION = "Duration",
-    LAMBDA_INVOCATIONS = "Invocations",
-    LAMBDA_ERRORS = "Errors",
-    LAMBDA_THROTTLES = "Throttles",
-    LAMBDA_CONCURRENT_EXECUTIONS = "ConcurrentExecutions",
+    LAMBDA_DURATION = 'Duration',
+    LAMBDA_INVOCATIONS = 'Invocations',
+    LAMBDA_ERRORS = 'Errors',
+    LAMBDA_THROTTLES = 'Throttles',
+    LAMBDA_CONCURRENT_EXECUTIONS = 'ConcurrentExecutions',
 
     // AWS API Gateway (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html):
-    APIGATEWAY_4XX_ERROR = "4XXError",
-    APIGATEWAY_5XX_ERROR = "5XXError",
-    APIGATEWAY_COUNT = "Count",
-    APIGATEWAY_LATENCY = "Latency",
+    APIGATEWAY_4XX_ERROR = '4XXError',
+    APIGATEWAY_5XX_ERROR = '5XXError',
+    APIGATEWAY_COUNT = 'Count',
+    APIGATEWAY_LATENCY = 'Latency',
 
     // AWS Network Load Balancer (https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-cloudwatch-metrics.html):
-    NLB_HEALTHY_HOST_COUNT = "HealthyHostCount",
-    NLB_UNHEALTHY_HOST_COUNT = "UnHealthyHostCount",
-    NLB_CLIENT_TLS_NEGOTIATION_ERROR_COUNT = "ClientTLSNegotiationErrorCount",
-    NLB_TARGET_TLS_NEGOTIATION_ERROR_COUNT = "TargetTLSNegotiationErrorCount"
+    NLB_HEALTHY_HOST_COUNT = 'HealthyHostCount',
+    NLB_UNHEALTHY_HOST_COUNT = 'UnHealthyHostCount',
+    NLB_CLIENT_TLS_NEGOTIATION_ERROR_COUNT = 'ClientTLSNegotiationErrorCount',
+    NLB_TARGET_TLS_NEGOTIATION_ERROR_COUNT = 'TargetTLSNegotiationErrorCount'
 }
 
 export enum ComparisonOperator {
@@ -62,13 +62,13 @@ export enum ComparisonOperator {
     LESS = 'LessThanThreshold',
     GREATER_OR_EQUAL = 'GreaterThanOrEqualToThreshold',
     LESS_OR_EQUAL = 'LessThanOrEqualToThreshold',
-    EQUAL = "Equal",
-    NOT_EQUAL = "NotEqual",
+    EQUAL = 'Equal',
+    NOT_EQUAL = 'NotEqual',
 }
 
 export enum StatisticsOption {
     AVG = 'Average',
-    RATE = "Rate",
+    RATE = 'Rate',
     SAMPLE_COUNT = 'SampleCount',
     SUM = 'Sum',
     MINIMUM = 'Minimum',
