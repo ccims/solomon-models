@@ -132,8 +132,8 @@
         "affectsGlobalScope": false
       },
       "../src/slo-rule.model.ts": {
-        "version": "f7b9c49de4205e0bc2dc0692432668a0423c06c93665dc415c25ed9eccfa841d",
-        "signature": "607ecfa6de69e4ca59feae387e71e723ef4c67bbb4f4aeb468e868f08df9287e",
+        "version": "8dfb3e3092bbeadbeb85f0fb2872aca7289ac528fa566119fa87951c1b031c83",
+        "signature": "dc0b6f22ffa8d6476101012d602cece39cf517da9c08d0118a96ea99a3588b59",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {

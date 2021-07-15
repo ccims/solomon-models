@@ -53,8 +53,17 @@ export enum MetricOption {
     // AWS Network Load Balancer (https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-cloudwatch-metrics.html):
     NLB_HEALTHY_HOST_COUNT = 'HealthyHostCount',
     NLB_UNHEALTHY_HOST_COUNT = 'UnHealthyHostCount',
-    NLB_CLIENT_TLS_NEGOTIATION_ERROR_COUNT = 'ClientTLSNegotiationErrorCount',
-    NLB_TARGET_TLS_NEGOTIATION_ERROR_COUNT = 'TargetTLSNegotiationErrorCount'
+    NLB_ACTIVE_FLOW_COUNT = 'ActiveFlowCount',
+    NLB_CONSUMED_LCUS = 'ConsumedLCUs',
+
+    // AWS RDS (https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html):
+    RDS_CPU_UTILIZATION = 'CPUUtilization',
+    RDS_DATABASE_CONNECTIONS = 'DatabaseConnections',
+    RDS_FREE_STORAGE_SPACE = 'FreeStorageSpace',
+
+    // AWS ECS (https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html):
+    ECS_CPU_UTILIZATION = 'CPUUtilization',
+    ECS_MEMORY_UTILIZATION = 'MemoryUtilization'
 }
 
 export enum ComparisonOperator {
