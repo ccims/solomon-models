@@ -127,8 +127,8 @@
         "affectsGlobalScope": false
       },
       "../src/target.model.ts": {
-        "version": "3d31662053edab3a1857b36391f0a7ddbe8c8505aa94ea6b961345d2eeeeb102",
-        "signature": "1ebde6410192f3b8606a3c2b669ec2c76f11027471c13cdc8e74c9c7e8fefcdb",
+        "version": "795b540c94a538951d29e13c19e0066e9e7b55ea64ac2c1694a6d07ffa77432e",
+        "signature": "d27467aecf2ad12445961a67f76ce60e262001b204eb3415044e2ec4469ebbad",
         "affectsGlobalScope": false
       },
       "../src/slo-rule.model.ts": {

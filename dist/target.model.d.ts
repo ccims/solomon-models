@@ -5,9 +5,9 @@ export interface Target {
     targetType?: TargetType;
 }
 export declare enum TargetType {
-    AWS_LAMBDA = "AWS/Lambda",
-    AWS_ECS = "AWS/ECS",
-    AWS_APIGATEWAY = "AWS/ApiGateway",
-    AWS_ELB = "AWS/NetworkELB",
-    AWS_RDS = "AWS/RDS"
+    AWS_LAMBDA = "AWS-Lambda",
+    AWS_ECS = "AWS-ECS",
+    AWS_APIGATEWAY = "AWS-ApiGateway",
+    AWS_ELB = "AWS-NetworkELB",
+    AWS_RDS = "AWS-RDS"
 }
