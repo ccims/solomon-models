@@ -127,13 +127,13 @@
         "affectsGlobalScope": false
       },
       "../src/target.model.ts": {
-        "version": "ceea5ed3235916e05f6d679e55dc89f1914a4fd9642e223d46295b301f2fdb51",
-        "signature": "6955a3585a777e07e93d4b44c1d5a9e926f6a5ee52a8732ce5e764373fb2486c",
+        "version": "3d31662053edab3a1857b36391f0a7ddbe8c8505aa94ea6b961345d2eeeeb102",
+        "signature": "1ebde6410192f3b8606a3c2b669ec2c76f11027471c13cdc8e74c9c7e8fefcdb",
         "affectsGlobalScope": false
       },
       "../src/slo-rule.model.ts": {
-        "version": "8dfb3e3092bbeadbeb85f0fb2872aca7289ac528fa566119fa87951c1b031c83",
-        "signature": "dc0b6f22ffa8d6476101012d602cece39cf517da9c08d0118a96ea99a3588b59",
+        "version": "4362f667a8342dbe7671c32185549eeeb0e43b1428de313ffa15b49eaf2b9144",
+        "signature": "a7f47684653fe0e9949a8503f76269fab9e530227fe2ad9bbb061536b1945195",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
@@ -165,12 +165,18 @@
         "../src/gropius.model.ts",
         "../src/slo-rule.model.ts",
         "../src/target.model.ts"
+      ],
+      "../src/slo-rule.model.ts": [
+        "../src/target.model.ts"
       ]
     },
     "exportedModulesMap": {
       "../src/index.ts": [
         "../src/gropius.model.ts",
         "../src/slo-rule.model.ts",
+        "../src/target.model.ts"
+      ],
+      "../src/slo-rule.model.ts": [
         "../src/target.model.ts"
       ]
     },

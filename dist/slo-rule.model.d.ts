@@ -1,9 +1,11 @@
+import { TargetType } from "./target.model";
 export default interface SloRule {
     id?: string;
     name: string;
     description?: string;
     deploymentEnvironment: DeploymentEnvironment;
     targetId: string;
+    targetType?: TargetType;
     gropiusProjectId?: string;
     gropiusComponentId?: string;
     preset?: PresetOption;

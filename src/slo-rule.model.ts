@@ -1,3 +1,5 @@
+import { TargetType } from "./target.model";
+
 export default interface SloRule {
     id?: string; // corresponds to AlarmArn in CW, can be a generated id for Prometheus
     name: string; // display name of the rule, provided by user
@@ -5,6 +7,7 @@ export default interface SloRule {
 
     deploymentEnvironment: DeploymentEnvironment; // the environment where the component of the application that is to be monitored is deployed, e.g. AWS, or Kubernetes
     targetId: string; // id used by the monitoring tool in the deployment environment to identify the resource for which the rule should apply
+    targetType?: TargetType; // the component type of the target (e.g. Lambda, API Gateway...), strictly needed for AWS
 
     gropiusProjectId?: string; // id of the gropius project for which issues shall be created
     gropiusComponentId?: string; // id of the component modelled in a gropius project and which is linked in the created issue
