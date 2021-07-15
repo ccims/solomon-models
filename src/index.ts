@@ -1,4 +1,4 @@
-import { Target } from "./target.model";
+import { Target, TargetType } from "./target.model";
 import SloRule, {
     DeploymentEnvironment,
     MetricOption,
@@ -18,5 +18,6 @@ export {
     GropiusComponent,
     GropiusProject,
     GropiusIssue,
-    Target
+    Target,
+    TargetType
 }
