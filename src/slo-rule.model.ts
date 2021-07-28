@@ -1,6 +1,6 @@
 import { TargetType } from "./target.model";
 
-export default interface SloRule {
+export default interface Slo {
     id?: string; // corresponds to AlarmArn in CW, can be a generated id for Prometheus
     name: string; // display name of the rule, provided by user
     description?: string; // displayed description of the rule, provided by user

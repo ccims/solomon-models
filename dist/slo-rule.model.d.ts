@@ -1,5 +1,5 @@
 import { TargetType } from "./target.model";
-export default interface SloRule {
+export default interface Slo {
     id?: string;
     name: string;
     description?: string;

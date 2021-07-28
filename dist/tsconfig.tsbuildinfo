@@ -132,13 +132,13 @@
         "affectsGlobalScope": false
       },
       "../src/slo-rule.model.ts": {
-        "version": "4362f667a8342dbe7671c32185549eeeb0e43b1428de313ffa15b49eaf2b9144",
-        "signature": "a7f47684653fe0e9949a8503f76269fab9e530227fe2ad9bbb061536b1945195",
+        "version": "4c5167299e4eb70d9eea8fe56f9ed8a398231dc17330f1c18bda49bf41252fec",
+        "signature": "5fbb656c85b5775a91cefe58200b16ac7068c0e2ca99a8798f08219b70e8c798",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "5892df9905c9806a59eef2baa5577117bd966b21cbd4fe7210d06148df8750a5",
-        "signature": "574d354614910bfb0630aa26bc14b5e1950003b76a715e485d6ac7d7e9713777",
+        "version": "589058466324941f23856715bd986ad7845ccdfbbb0cac4aa9017d3b731af5f4",
+        "signature": "c761ca0e2c82696922de3935bf8b37f8ad2c2cda0b1fc8aa1b469dd4f0cc6829",
         "affectsGlobalScope": false
       },
       "../src/issue.model.ts": {
