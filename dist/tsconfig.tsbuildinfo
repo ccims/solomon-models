@@ -127,18 +127,18 @@
         "affectsGlobalScope": false
       },
       "../src/target.model.ts": {
-        "version": "ceea5ed3235916e05f6d679e55dc89f1914a4fd9642e223d46295b301f2fdb51",
-        "signature": "7e009fd4eceeeef69827a7e52808a3c6619e6849bafd272be899241f021f3ff1",
+        "version": "795b540c94a538951d29e13c19e0066e9e7b55ea64ac2c1694a6d07ffa77432e",
+        "signature": "506988a8a30ea50ab1c5c203b24be1a40b437ea48d1c641bf69c17663467c584",
         "affectsGlobalScope": false
       },
       "../src/slo-rule.model.ts": {
-        "version": "fe886d52264965608e26e745d10d62da888e1ef8dce7f30ac93aedae4de91fee",
-        "signature": "4238e0f921068f6bf02553942b2e01dc5c0128853c09aac8b119a6e45ff1977f",
+        "version": "4c5167299e4eb70d9eea8fe56f9ed8a398231dc17330f1c18bda49bf41252fec",
+        "signature": "80bca5937716c4e26332f434a8bcef125eb77a2bd8f35f54238360c7dd656cd8",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "6426003afbd47777b274597f088a3a26c37d9b39e38ecd849c72d43f2594903b",
-        "signature": "31deed89b65104141091924efd130663cf9eb83a2fd77302bd037550b4a49c76",
+        "version": "589058466324941f23856715bd986ad7845ccdfbbb0cac4aa9017d3b731af5f4",
+        "signature": "dc87cf01dd445ddfa0edd62fda9454dc145ca96d4d3ec4a12588241213405d3a",
         "affectsGlobalScope": false
       },
       "../src/issue.model.ts": {
@@ -165,12 +165,18 @@
         "../src/gropius.model.ts",
         "../src/slo-rule.model.ts",
         "../src/target.model.ts"
+      ],
+      "../src/slo-rule.model.ts": [
+        "../src/target.model.ts"
       ]
     },
     "exportedModulesMap": {
       "../src/index.ts": [
         "../src/gropius.model.ts",
         "../src/slo-rule.model.ts",
+        "../src/target.model.ts"
+      ],
+      "../src/slo-rule.model.ts": [
         "../src/target.model.ts"
       ]
     },

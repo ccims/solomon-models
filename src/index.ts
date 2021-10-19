@@ -1,5 +1,5 @@
-import { Target } from "./target.model";
-import SloRule, {
+import { Target, TargetType } from "./target.model";
+import Slo, {
     DeploymentEnvironment,
     MetricOption,
     ComparisonOperator,
@@ -9,7 +9,7 @@ import SloRule, {
 import { GropiusComponent, GropiusProject, GropiusIssue } from "./gropius.model";
 
 export {
-    SloRule,
+    Slo,
     DeploymentEnvironment,
     MetricOption,
     ComparisonOperator,
@@ -18,5 +18,6 @@ export {
     GropiusComponent,
     GropiusProject,
     GropiusIssue,
-    Target
+    Target,
+    TargetType
 }

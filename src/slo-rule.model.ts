@@ -1,10 +1,13 @@
-export default interface SloRule {
+import { TargetType } from "./target.model";
+
+export default interface Slo {
     id?: string; // corresponds to AlarmArn in CW, can be a generated id for Prometheus
     name: string; // display name of the rule, provided by user
     description?: string; // displayed description of the rule, provided by user
 
     deploymentEnvironment: DeploymentEnvironment; // the environment where the component of the application that is to be monitored is deployed, e.g. AWS, or Kubernetes
     targetId: string; // id used by the monitoring tool in the deployment environment to identify the resource for which the rule should apply
+    targetType?: TargetType; // the component type of the target (e.g. Lambda, API Gateway...), strictly needed for AWS
 
     gropiusProjectId?: string; // id of the gropius project for which issues shall be created
     gropiusComponentId?: string; // id of the component modelled in a gropius project and which is linked in the created issue
@@ -26,49 +29,58 @@ export enum DeploymentEnvironment {
 }
 
 export enum PresetOption {
-    AVAILABILITY = "Availability",
-    RESPONSE_TIME = "Response time",
-    CUSTOM = "Custom"
+    AVAILABILITY = 'Availability',
+    RESPONSE_TIME = 'Response time',
+    CUSTOM = 'Custom'
 }
 
 // in CW the allowed metrics depend on the target type and should thus be fetched dynamically, e.g. for Lambda Errors, Invocations, Duration, Throttles, ConcurrentExecutions
 export enum MetricOption {
     // Prometheus
     PROBE_SUCCESS = 'probe_success',
-    RESPONSE_TIME = "probe_duration_seconds",
+    RESPONSE_TIME = 'probe_duration_seconds',
 
     // AWS Lambda (https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics.html):
-    LAMBDA_DURATION = "Duration",
-    LAMBDA_INVOCATIONS = "Invocations",
-    LAMBDA_ERRORS = "Errors",
-    LAMBDA_THROTTLES = "Throttles",
-    LAMBDA_CONCURRENT_EXECUTIONS = "ConcurrentExecutions",
+    LAMBDA_DURATION = 'Duration',
+    LAMBDA_INVOCATIONS = 'Invocations',
+    LAMBDA_ERRORS = 'Errors',
+    LAMBDA_THROTTLES = 'Throttles',
+    LAMBDA_CONCURRENT_EXECUTIONS = 'ConcurrentExecutions',
 
     // AWS API Gateway (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html):
-    APIGATEWAY_4XX_ERROR = "4XXError",
-    APIGATEWAY_5XX_ERROR = "5XXError",
-    APIGATEWAY_COUNT = "Count",
-    APIGATEWAY_LATENCY = "Latency",
+    APIGATEWAY_4XX_ERROR = '4XXError',
+    APIGATEWAY_5XX_ERROR = '5XXError',
+    APIGATEWAY_COUNT = 'Count',
+    APIGATEWAY_LATENCY = 'Latency',
 
     // AWS Network Load Balancer (https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-cloudwatch-metrics.html):
-    NLB_HEALTHY_HOST_COUNT = "HealthyHostCount",
-    NLB_UNHEALTHY_HOST_COUNT = "UnHealthyHostCount",
-    NLB_CLIENT_TLS_NEGOTIATION_ERROR_COUNT = "ClientTLSNegotiationErrorCount",
-    NLB_TARGET_TLS_NEGOTIATION_ERROR_COUNT = "TargetTLSNegotiationErrorCount"
+    NLB_HEALTHY_HOST_COUNT = 'HealthyHostCount',
+    NLB_UNHEALTHY_HOST_COUNT = 'UnHealthyHostCount',
+    NLB_ACTIVE_FLOW_COUNT = 'ActiveFlowCount',
+    NLB_CONSUMED_LCUS = 'ConsumedLCUs',
+
+    // AWS RDS (https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html):
+    RDS_CPU_UTILIZATION = 'CPUUtilization',
+    RDS_DATABASE_CONNECTIONS = 'DatabaseConnections',
+    RDS_FREE_STORAGE_SPACE = 'FreeStorageSpace',
+
+    // AWS ECS (https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html):
+    ECS_CPU_UTILIZATION = 'CPUUtilization',
+    ECS_MEMORY_UTILIZATION = 'MemoryUtilization'
 }
 
 export enum ComparisonOperator {
-    GREATER = 'GreaterThanThreshold ',
-    LESS = 'LessThanThreshold ',
-    GREATER_OR_EQUAL = 'GreaterThanOrEqualToThreshold ',
-    LESS_OR_EQUAL = 'LessThanOrEqualToThreshold ',
-    EQUAL = "Equal",
-    NOT_EQUAL = "NotEqual",
+    GREATER = 'GreaterThanThreshold',
+    LESS = 'LessThanThreshold',
+    GREATER_OR_EQUAL = 'GreaterThanOrEqualToThreshold',
+    LESS_OR_EQUAL = 'LessThanOrEqualToThreshold',
+    EQUAL = 'Equal',
+    NOT_EQUAL = 'NotEqual',
 }
 
 export enum StatisticsOption {
     AVG = 'Average',
-    RATE = "Rate",
+    RATE = 'Rate',
     SAMPLE_COUNT = 'SampleCount',
     SUM = 'Sum',
     MINIMUM = 'Minimum',

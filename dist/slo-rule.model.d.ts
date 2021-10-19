@@ -1,9 +1,11 @@
-export default interface SloRule {
+import { TargetType } from "./target.model";
+export default interface Slo {
     id?: string;
     name: string;
     description?: string;
     deploymentEnvironment: DeploymentEnvironment;
     targetId: string;
+    targetType?: TargetType;
     gropiusProjectId?: string;
     gropiusComponentId?: string;
     preset?: PresetOption;
@@ -37,14 +39,19 @@ export declare enum MetricOption {
     APIGATEWAY_LATENCY = "Latency",
     NLB_HEALTHY_HOST_COUNT = "HealthyHostCount",
     NLB_UNHEALTHY_HOST_COUNT = "UnHealthyHostCount",
-    NLB_CLIENT_TLS_NEGOTIATION_ERROR_COUNT = "ClientTLSNegotiationErrorCount",
-    NLB_TARGET_TLS_NEGOTIATION_ERROR_COUNT = "TargetTLSNegotiationErrorCount"
+    NLB_ACTIVE_FLOW_COUNT = "ActiveFlowCount",
+    NLB_CONSUMED_LCUS = "ConsumedLCUs",
+    RDS_CPU_UTILIZATION = "CPUUtilization",
+    RDS_DATABASE_CONNECTIONS = "DatabaseConnections",
+    RDS_FREE_STORAGE_SPACE = "FreeStorageSpace",
+    ECS_CPU_UTILIZATION = "CPUUtilization",
+    ECS_MEMORY_UTILIZATION = "MemoryUtilization"
 }
 export declare enum ComparisonOperator {
-    GREATER = "GreaterThanThreshold ",
-    LESS = "LessThanThreshold ",
-    GREATER_OR_EQUAL = "GreaterThanOrEqualToThreshold ",
-    LESS_OR_EQUAL = "LessThanOrEqualToThreshold ",
+    GREATER = "GreaterThanThreshold",
+    LESS = "LessThanThreshold",
+    GREATER_OR_EQUAL = "GreaterThanOrEqualToThreshold",
+    LESS_OR_EQUAL = "LessThanOrEqualToThreshold",
     EQUAL = "Equal",
     NOT_EQUAL = "NotEqual"
 }
