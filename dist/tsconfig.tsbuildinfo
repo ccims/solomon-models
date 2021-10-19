@@ -122,8 +122,8 @@
         "affectsGlobalScope": false
       },
       "../src/gropius.model.ts": {
-        "version": "fad712dbff08dc0ac4753d5e2346d52f7a7c352d0995b3b795c33f1e4ad9b8a3",
-        "signature": "9fd8dfaabb73232ae84b9995706c4375700f44874b133f988168a99f3f985010",
+        "version": "ddbfcf5679447a7f86d18c96eb9b4726f70782eeab155d2c076f5c37af19a200",
+        "signature": "b5cde4097ea1327b991417b85344a157bfab160cf4160ce3e64fa2f20048d5a6",
         "affectsGlobalScope": false
       },
       "../src/target.model.ts": {
